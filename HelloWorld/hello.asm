@@ -1,6 +1,6 @@
 section .data
         msg db 'Hello, World!', 0xA     ; 0XA = VALOR 10, EM ASCII INDICA QUEBRA DE LINHA
-        tam equ $- msg
+        tam equ $- msg                  ; ESTA LINHA VERIFICA O TAMANHO ATE O FIM DOS COMANDOS DB       
 
 section .text
 
