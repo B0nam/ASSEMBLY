@@ -13,7 +13,7 @@ segment .data
     STD_OUT     equ 0x1         ;   SAIDA PADRAO
 
 section .data
-    msg db "Entre com seu nome: ", CR, LF
+    msg db "Entre com seu nome: ", LF, CR
     tam equ $- msg
 
 section .bss
@@ -30,7 +30,7 @@ _start:
     mov RCX, msg
     mov RDX, tam
     int SYS_CALL
-    ; LE O NOME     
+    ; LE O NOME
     mov RAX, SYS_READ
     mov RBX, STD_IN
     mov RCX, nome
